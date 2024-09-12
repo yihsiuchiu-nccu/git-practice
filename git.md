@@ -14,6 +14,11 @@ head即為目前所在commit的標籤，也就是目前資料夾內資料的版�
 ## 紀錄在 git repo 操作過程中，.git 檔案夾裡的變化，看看你可以觀察到什麼
 1. blob會存在objects資料夾裡  
 當我add readme.md後，可以看到objects資料夾裡多了一筆一串數字的內容，透過`ls-files`可以看出內容相符。
-![tree .git](tree_git.png)
+![check blob](tree_git.png)
 ![ls-files](ls-files.png)
+2. commit也會存在objects資料夾裡  
+![git log](git_log.png)
+![check commit](tree_git2.png)
+3. push到github上後，在ref資料夾中除了main以外，還會有一個origin/main，一個是指到本地資料夾，一個是指到github資料夾，如果開branch，也會產生相應名稱的資料
 ## commit message 應該怎麼寫比較好？應該有什麼 style 嗎？
+應該要有這個commit的主要貢獻類型，例如feat、fix、refactor、test等等。後面應該要接貢獻敘述，並於最後可以標註一些對應內容，例如解決某個issue(e.g. close #123)。
