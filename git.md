@@ -36,4 +36,5 @@ git採用的是**快照而非差異**，部分版本控制系統會用差異方�
 ### merge vs rebase
 merge跟rebase目的都是要合併分支，然而手法上卻不一樣，merge會保留分支的完整歷史，rebase則是把分支的內容在要合併的分支上直接重現，因此分支的歷史會不見。根據GPT的說法，一般規則是：不要對公開的分支進行 rebase，而只在本地的開發分支上使用它。
 
-### 
+### head跟branch的關係，branch怎麼存
+HEAD是當前工作目錄的指標，在.git/HEAD內容可以看到目前工作目錄是在哪個branch下，當checkout到其他branch的時候，會指向該branch的最新commit。具體branch的儲存地方可以從剛剛的.git/HEAD看出在refs/heads中，如前面所述，裡面的內容會是根節點的hash。
